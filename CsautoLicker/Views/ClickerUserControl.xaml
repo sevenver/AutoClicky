@@ -1,0 +1,56 @@
+﻿<UserControl x:Class="CsautoLicker.Views.ClickerUserControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:CsautoLicker.Views"
+             xmlns:viewModells="clr-namespace:CsautoLicker.ViewModels"
+             xmlns:helpers="clr-namespace:CsautoLicker.Helpers"
+             xmlns:models="clr-namespace:CsautoLicker.Models"
+             
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <UserControl.Resources>
+        <helpers:SecToMilConverter x:Key="SecToMilConverter"/>
+    </UserControl.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="2*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Image HorizontalAlignment="Left"   Grid.ColumnSpan="2" Grid.RowSpan="2" Stretch="Uniform" StretchDirection="Both" Source="/Resources/VaganyCigany.jpg"/>
+        <StackPanel Margin="10">
+            <Button Content="Start Recording" Command="{Binding StartRecordingCommand}"/>
+            <Button Content="Stop Recording" Command="{Binding StopRecordingCommand}"/>
+            <Button Content="Repeat Recording" Command="{Binding RepeatRecordingCommand}"/>
+            <Button Content="Clicky Tutchy Repeat Recording 4 evah" Command="{Binding RepeatEndlessRecordingCommand}"/>
+            <Button Content="Save Tutchy Tutchy" Command="{Binding SaveCommand}" />
+            <Button Content="Clear Shitty List" Command="{Binding ClearCommand}" />
+        </StackPanel>
+        <Image Source="/CsautoLicker;component/Resources/zoli.jpg"  Height="{Binding ActualHeight, ElementName=ClickyContainer}" Margin="0,0,5,5" Grid.Row="1" Grid.Column="2" Stretch="Fill"/>
+        <ListView x:Name="ClickyContainer" Margin="0,0,5,5" Grid.Row="1" Background="Transparent" Grid.Column="2" ItemsSource="{Binding ClickPositions}">
+    
+            <ListView.ItemTemplate>
+                <DataTemplate DataType="{x:Type models:ClickyThingy}">
+                    <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                        <TextBlock Foreground="Blue" Text="X = "/>
+                        <TextBlock Foreground="Blue" Text="{Binding Location.X}"/>
+                        <TextBlock Foreground="Blue" Text="Y = "/>
+                        <TextBlock Foreground="Blue" Text="{Binding Location.Y}"/>
+                        <TextBlock Foreground="Blue" Text="Delay(s) = "/>
+                        <TextBox Foreground="Blue" PreviewTextInput="NumberValidationTextBox" Text="{Binding Delay, Converter={StaticResource SecToMilConverter}}" />
+                        <TextBlock Foreground="Blue" Text="Enabled = "/>
+                        <CheckBox Foreground="Blue" IsChecked="{Binding Enabled}"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+            
+        </ListView>
+        
+
+    </Grid>
+</UserControl>
