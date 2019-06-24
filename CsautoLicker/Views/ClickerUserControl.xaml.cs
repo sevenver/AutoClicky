@@ -24,7 +24,7 @@ namespace CsautoLicker.Views
         public ClickerUserControl()
         {
             InitializeComponent();
-            this.DataContext = ViewModel = Singleton<ClickerViewModell>.Instance;
+            this.DataContext = ViewModel = new ClickerViewModell();
             Title = ViewModel.Title;
         }
 

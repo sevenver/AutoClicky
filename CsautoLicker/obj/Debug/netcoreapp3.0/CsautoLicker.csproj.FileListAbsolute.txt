@@ -21,6 +21,10 @@ C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\obj\Debug\netcoreapp3.0\Vi
 C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\obj\Debug\netcoreapp3.0\Views\SettingsUserControl.baml
 C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\obj\Debug\netcoreapp3.0\GeneratedInternalTypeHelper.g.cs
 C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\obj\Debug\netcoreapp3.0\App.baml
-C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\obj\Debug\netcoreapp3.0\CsautoLicker.csprojAssemblyReference.cache
 C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\bin\Debug\netcoreapp3.0\Newtonsoft.Json.dll
 C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\obj\Debug\netcoreapp3.0\CsautoLicker.csproj.CopyComplete
+C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\bin\Debug\netcoreapp3.0\LowLevelInput.dll
+C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\bin\Debug\netcoreapp3.0\GalaSoft.MvvmLight.Extras.dll
+C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\bin\Debug\netcoreapp3.0\GalaSoft.MvvmLight.Platform.dll
+C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\bin\Debug\netcoreapp3.0\GalaSoft.MvvmLight.dll
+C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\bin\Debug\netcoreapp3.0\System.Windows.Interactivity.dll

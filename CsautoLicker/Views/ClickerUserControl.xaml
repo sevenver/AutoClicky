@@ -12,6 +12,25 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <UserControl.Resources>
         <helpers:SecToMilConverter x:Key="SecToMilConverter"/>
+        <SolidColorBrush x:Key="FontColor" Color="Snow"/>
+        <Style x:Key="FaderStyle" TargetType="{x:Type TextBlock}">
+            <Style.Resources>
+                <Storyboard x:Key="FadeStoryboard">
+                    <DoubleAnimation Storyboard.TargetProperty="(TextBlock.Opacity)" 
+                                From="0" To="1" Duration="0:0:0.5"
+                                RepeatBehavior="Forever" AutoReverse="True"/>
+                    <ColorAnimation Storyboard.TargetProperty="(TextBlock.Foreground).(SolidColorBrush.Color)"
+                                From="Blue" To="Red"  Duration="0:0:0.5"  RepeatBehavior="Forever" AutoReverse="True" />
+                </Storyboard>
+            </Style.Resources>
+            <Style.Triggers>
+                <Trigger Property="Visibility" Value="Visible">
+                    <Trigger.EnterActions>
+                        <BeginStoryboard Storyboard="{StaticResource FadeStoryboard}"/>
+                    </Trigger.EnterActions>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
     </UserControl.Resources>
     <Grid>
         <Grid.ColumnDefinitions>
@@ -23,9 +42,17 @@
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
         <Image HorizontalAlignment="Left"   Grid.ColumnSpan="2" Grid.RowSpan="2" Stretch="Uniform" StretchDirection="Both" Source="/Resources/VaganyCigany.jpg"/>
+        <Grid Grid.Column="1" Background="Black">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock HorizontalAlignment="Center" Foreground="White" FontSize="24" Style="{StaticResource FaderStyle}" Text="Buy this Product for 9000 HUF/Month"/>
+                <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
+                    <Button Content="Mom's Card"/>
+                    <Button Margin="5,0,0,0" Content="Mom's Phone"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
         <StackPanel Margin="10">
-            <Button Content="Start Recording" Command="{Binding StartRecordingCommand}"/>
-            <Button Content="Stop Recording" Command="{Binding StopRecordingCommand}"/>
+            <Button Content="Start/Stop Recording" Command="{Binding StartRecordingCommand}"/>
             <Button Content="Repeat Recording" Command="{Binding RepeatRecordingCommand}"/>
             <Button Content="Clicky Tutchy Repeat Recording 4 evah" Command="{Binding RepeatEndlessRecordingCommand}"/>
             <Button Content="Save Tutchy Tutchy" Command="{Binding SaveCommand}" />
@@ -33,24 +60,24 @@
         </StackPanel>
         <Image Source="/CsautoLicker;component/Resources/zoli.jpg"  Height="{Binding ActualHeight, ElementName=ClickyContainer}" Margin="0,0,5,5" Grid.Row="1" Grid.Column="2" Stretch="Fill"/>
         <ListView x:Name="ClickyContainer" Margin="0,0,5,5" Grid.Row="1" Background="Transparent" Grid.Column="2" ItemsSource="{Binding ClickPositions}">
-    
+
             <ListView.ItemTemplate>
                 <DataTemplate DataType="{x:Type models:ClickyThingy}">
                     <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                        <TextBlock Foreground="Blue" Text="X = "/>
-                        <TextBlock Foreground="Blue" Text="{Binding Location.X}"/>
-                        <TextBlock Foreground="Blue" Text="Y = "/>
-                        <TextBlock Foreground="Blue" Text="{Binding Location.Y}"/>
-                        <TextBlock Foreground="Blue" Text="Delay(s) = "/>
-                        <TextBox Foreground="Blue" PreviewTextInput="NumberValidationTextBox" Text="{Binding Delay, Converter={StaticResource SecToMilConverter}}" />
-                        <TextBlock Foreground="Blue" Text="Enabled = "/>
-                        <CheckBox Foreground="Blue" IsChecked="{Binding Enabled}"/>
+                        <TextBlock Foreground="{StaticResource FontColor}" Text="X = "/>
+                        <TextBlock Foreground="{StaticResource FontColor}" Text="{Binding Location.X}"/>
+                        <TextBlock Foreground="{StaticResource FontColor}" Text="Y = "/>
+                        <TextBlock Foreground="{StaticResource FontColor}" Text="{Binding Location.Y}"/>
+                        <TextBlock Foreground="{StaticResource FontColor}" Text="Delay(s) = "/>
+                        <TextBox Foreground="{StaticResource FontColor}" PreviewTextInput="NumberValidationTextBox" Text="{Binding Delay, Converter={StaticResource SecToMilConverter}}" />
+                        <TextBlock Foreground="{StaticResource FontColor}" Text="Enabled = "/>
+                        <CheckBox Foreground="{StaticResource FontColor}" IsChecked="{Binding Enabled}"/>
                     </StackPanel>
                 </DataTemplate>
             </ListView.ItemTemplate>
-            
+
         </ListView>
-        
+
 
     </Grid>
 </UserControl>

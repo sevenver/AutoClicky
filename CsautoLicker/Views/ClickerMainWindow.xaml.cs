@@ -25,5 +25,10 @@ namespace CsautoLicker.Views
         }
 
         public ClickerMainViewModell ViewModel { get; }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            Tabs.SelectedIndex = 0;
+        }
     }
 }

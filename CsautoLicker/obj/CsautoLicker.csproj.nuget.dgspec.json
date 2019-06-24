@@ -41,12 +41,20 @@
       "frameworks": {
         "netcoreapp3.0": {
           "dependencies": {
+            "LowLevelInput.Net": {
+              "target": "Package",
+              "version": "[1.36.6, )"
+            },
             "Microsoft.NETCore.App": {
               "include": "None",
               "suppressParent": "All",
               "target": "Package",
               "version": "[3.0.0-preview6-27804-01, )",
               "autoReferenced": true
+            },
+            "MvvmLightLibs": {
+              "target": "Package",
+              "version": "[5.4.1.1, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

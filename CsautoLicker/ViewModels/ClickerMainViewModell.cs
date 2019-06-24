@@ -1,4 +1,5 @@
-﻿using CsautoLicker.Views;
+﻿using CsautoLicker.Helpers;
+using CsautoLicker.Views;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -11,6 +12,7 @@ namespace CsautoLicker.ViewModels
     {
         public ClickerMainViewModell() : base("Zolika egy Buzika")
         {
+            
             var tabTemp = new ClickerUserControl();
             TabPages.Add(new TabItem() { Header = tabTemp.Title, Content = tabTemp });
             var tabTemp2 = new SettingsUserControl();

@@ -1,6 +1,7 @@
 ﻿using CsautoLicker.Helpers;
 using CsautoLicker.Models;
 using CsautoLicker.Services;
+using GalaSoft.MvvmLight.Messaging;
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
@@ -16,6 +17,11 @@ using MouseEventArgs = System.Windows.Forms.MouseEventArgs;
 
 namespace CsautoLicker.ViewModels
 {
+    enum TaskEnum
+    {
+        Recording,
+        Repeat,
+    }
     public class ClickerViewModell : BaseViewModell
     {
         public MouseHookService MouseHook { get; set; } = new MouseHookService();
@@ -31,7 +37,25 @@ namespace CsautoLicker.ViewModels
                     ClickPositions.Add(clicky);
                 }
             }
+            Messenger.Default.Register<TaskEnum>(this, enu => App.Current.Dispatcher.Invoke(() => HandleMessenger(enu)));
         }
+
+        private void HandleMessenger(TaskEnum taskEnum)
+        {
+            switch (taskEnum)
+            {
+                case TaskEnum.Recording:
+                    HandleHooky();
+                    break;
+                case TaskEnum.Repeat:
+                    HandleRepeat();
+                    break;
+                default:
+                    break;
+            }
+        }
+
+
         private bool recording;
 
 
@@ -41,14 +65,16 @@ namespace CsautoLicker.ViewModels
 
         public ICommand StartRecordingCommand
         {
-            get { return startRecording ?? (startRecording = new RelayCommand(s => HookUpMouse())); }
+            get { return startRecording ?? (startRecording = new RelayCommand(s => HandleHooky())); }
         }
-        private ICommand stopRecording;
 
-        public ICommand StopRecordingCommand
+        public void HandleHooky()
         {
-            get { return stopRecording ?? (stopRecording = new RelayCommand(s => UnHookMouse())); }
+            if (!recording) HookUpMouse();
+            else UnHookMouse();
         }
+
+        
         private ICommand repeatRecording;
 
         public ICommand RepeatRecordingCommand
@@ -142,7 +168,7 @@ namespace CsautoLicker.ViewModels
             //MouseHook.MouseUpEvent -= mh_MouseUpEvent;
         }
 
-        private void HookUpMouse()
+        public void HookUpMouse()
         {
             recording = true;
             MouseHook.SetHook();

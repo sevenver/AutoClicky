@@ -8,11 +8,21 @@
     ".NETCoreApp,Version=v3.0": {
       "CsautoLicker/1.0.0": {
         "dependencies": {
+          "LowLevelInput.Net": "1.36.6",
           "Microsoft.NETCore.App": "3.0.0-preview6-27804-01",
+          "MvvmLightLibs": "5.4.1.1",
           "Newtonsoft.Json": "12.0.2"
         },
         "runtime": {
           "CsautoLicker.dll": {}
+        }
+      },
+      "LowLevelInput.Net/1.36.6": {
+        "runtime": {
+          "lib/LowLevelInput.dll": {
+            "assemblyVersion": "1.36.6.0",
+            "fileVersion": "1.36.6.0"
+          }
         }
       },
       "Microsoft.NETCore.App/3.0.0-preview6-27804-01": {
@@ -21,6 +31,26 @@
         }
       },
       "Microsoft.NETCore.Platforms/3.0.0-preview6.19303.8": {},
+      "MvvmLightLibs/5.4.1.1": {
+        "runtime": {
+          "lib/net45/GalaSoft.MvvmLight.Extras.dll": {
+            "assemblyVersion": "5.4.1.0",
+            "fileVersion": "5.4.1.0"
+          },
+          "lib/net45/GalaSoft.MvvmLight.Platform.dll": {
+            "assemblyVersion": "5.4.1.0",
+            "fileVersion": "5.4.1.0"
+          },
+          "lib/net45/GalaSoft.MvvmLight.dll": {
+            "assemblyVersion": "5.4.1.0",
+            "fileVersion": "5.4.1.0"
+          },
+          "lib/net45/System.Windows.Interactivity.dll": {
+            "assemblyVersion": "4.5.0.0",
+            "fileVersion": "3.0.40218.0"
+          }
+        }
+      },
       "Newtonsoft.Json/12.0.2": {
         "runtime": {
           "lib/netstandard2.0/Newtonsoft.Json.dll": {
@@ -37,6 +67,13 @@
       "serviceable": false,
       "sha512": ""
     },
+    "LowLevelInput.Net/1.36.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-CTQFfpAh8V8jKppL0k34Xbr95Q3hfEKvl+bYYBvE0cTh+hiSQj6PhE0qd8jkbOBfA0O7KhDJgYC6qWa7LqBQtw==",
+      "path": "lowlevelinput.net/1.36.6",
+      "hashPath": "lowlevelinput.net.1.36.6.nupkg.sha512"
+    },
     "Microsoft.NETCore.App/3.0.0-preview6-27804-01": {
       "type": "package",
       "serviceable": true,
@@ -50,6 +87,13 @@
       "sha512": "sha512-9nE9InmtkWL1ZIAvzZPoe8zzr8JNrmyofR5++0NCLomrLSbR70b60hLXFE/7vXIVgbKdTo3CTsCcFTOSZoOIEw==",
       "path": "microsoft.netcore.platforms/3.0.0-preview6.19303.8",
       "hashPath": "microsoft.netcore.platforms.3.0.0-preview6.19303.8.nupkg.sha512"
+    },
+    "MvvmLightLibs/5.4.1.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-xYpVzOYnIz/M6T0pdc3w5t0vrt2ZKspSS+CZjQ+pZE+5yHv9qXSWkncHJXb6D7Egstalso4ivnIUkA1xEClViw==",
+      "path": "mvvmlightlibs/5.4.1.1",
+      "hashPath": "mvvmlightlibs.5.4.1.1.nupkg.sha512"
     },
     "Newtonsoft.Json/12.0.2": {
       "type": "package",

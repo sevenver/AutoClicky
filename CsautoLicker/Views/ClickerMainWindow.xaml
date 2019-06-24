@@ -7,9 +7,11 @@
         xmlns:local="clr-namespace:CsautoLicker.Views"
         Background="{StaticResource Background}"
         mc:Ignorable="d"
+        Loaded="Window_Loaded"
         Title="{Binding Title}" Height="450" Width="800">
+    
     <Grid>
-        <TabControl ItemsSource="{Binding TabPages}">
+        <TabControl x:Name="Tabs" ItemsSource="{Binding TabPages}">
             <TabControl.ItemTemplate>
                 <DataTemplate>
                     <TextBlock Text="{Binding Title}"/>
