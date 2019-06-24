@@ -28,3 +28,8 @@ C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\bin\Debug\netcoreapp3.0\Ga
 C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\bin\Debug\netcoreapp3.0\GalaSoft.MvvmLight.Platform.dll
 C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\bin\Debug\netcoreapp3.0\GalaSoft.MvvmLight.dll
 C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\bin\Debug\netcoreapp3.0\System.Windows.Interactivity.dll
+C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\obj\Debug\netcoreapp3.0\CsautoLicker.csprojAssemblyReference.cache
+C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\obj\Debug\netcoreapp3.0\Views\CardDialog.g.cs
+C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\obj\Debug\netcoreapp3.0\Views\CardDialog.baml
+C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\obj\Debug\netcoreapp3.0\Views\ZoliEszik.g.cs
+C:\Users\seven\source\repos\CsautoLicker\CsautoLicker\obj\Debug\netcoreapp3.0\Views\ZoliEszik.baml

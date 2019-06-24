@@ -1,0 +1,18 @@
+﻿<Window x:Class="CsautoLicker.Views.CardDialog"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:CsautoLicker.Views"
+         WindowStartupLocation="CenterScreen"
+        mc:Ignorable="d"
+        Title="CardDialog" Height="450" Width="450">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <Image Source="/CsautoLicker;component/Resources/Screenshot_2018-03-11-13-38-05-027_com.miui.home.png" Stretch="Fill"/>
+        <Button Grid.Row="1" IsDefault="True" IsCancel="True" Content="Leszopnám" Background="White" Foreground="Red" />
+    </Grid>
+</Window>

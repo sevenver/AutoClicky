@@ -13,7 +13,8 @@
         <helpers:EnumConverter x:Key="EnumConverter"/>
     </UserControl.Resources>
     <Grid>
-        <ListView ItemsSource="{Binding RecordingCombinations}">
+        <Image  Height="{Binding ActualHeight, ElementName=Bukkake}" Source="/Resources/Birthday.jpg"/>
+        <ListView Background="Transparent" x:Name="Bukkake" ItemsSource="{Binding RecordingCombinations}">
             <ListView.ItemTemplate>
                 <DataTemplate DataType="{x:Type modells:ClickyThingy}">
                     <StackPanel Orientation="Horizontal">

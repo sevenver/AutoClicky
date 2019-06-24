@@ -7,6 +7,9 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="Views\CardDialog.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="Views\ClickerMainWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
@@ -14,6 +17,9 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Update="Views\SettingsUserControl.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="Views\ZoliEszik.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

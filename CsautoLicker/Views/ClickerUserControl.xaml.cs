@@ -48,5 +48,19 @@ namespace CsautoLicker.Views
             Regex regex = new Regex("^-?\\d * (\\.\\d +)?$");
             e.Handled = regex.IsMatch(e.Text);
         }
+
+     
+
+        private void Card_Click(object sender, RoutedEventArgs e)
+        {
+            CardDialog inputDialog = new CardDialog();
+            inputDialog.ShowDialog();
+        }
+
+        private void Phone_Click(object sender, RoutedEventArgs e)
+        {
+            ZoliEszik inputDialog = new ZoliEszik();
+            inputDialog.ShowDialog();
+        }
     }
 }

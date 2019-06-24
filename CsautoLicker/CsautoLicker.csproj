@@ -7,9 +7,12 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Resources\Birthday.jpg" />
+    <None Remove="Resources\Happy.jpg" />
+    <None Remove="Resources\P90.jpg" />
     <None Remove="Resources\Screenshot_2018-03-11-13-38-05-027_com.miui.home.png" />
-    <None Remove="Resources\VaganyCigany.jpg" />
     <None Remove="Resources\zoli.jpg" />
+    <None Remove="Views\CardDialog.xaml" />
     <None Remove="Views\ClickerMainWindow.xaml" />
     <None Remove="Views\ClickerUserControl.xaml" />
     <None Remove="Views\SettingsUserControl.xaml" />
@@ -22,11 +25,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Resources\Screenshot_2018-03-11-13-38-05-027_com.miui.home.png">
+    <Resource Include="Resources\Birthday.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
-    <Resource Include="Resources\VaganyCigany.jpg">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    <Resource Include="Resources\Happy.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\P90.jpg">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\Screenshot_2018-03-11-13-38-05-027_com.miui.home.png">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Resource>
     <Resource Include="Resources\zoli.jpg">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>

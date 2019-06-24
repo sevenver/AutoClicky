@@ -41,13 +41,13 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="2*"/>
         </Grid.RowDefinitions>
-        <Image HorizontalAlignment="Left"   Grid.ColumnSpan="2" Grid.RowSpan="2" Stretch="Uniform" StretchDirection="Both" Source="/Resources/VaganyCigany.jpg"/>
+        <Image HorizontalAlignment="Left"   Grid.ColumnSpan="2" Grid.RowSpan="2" Stretch="Uniform" StretchDirection="Both" Source="/Resources/P90.jpg"/>
         <Grid Grid.Column="1" Background="Black">
             <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
                 <TextBlock HorizontalAlignment="Center" Foreground="White" FontSize="24" Style="{StaticResource FaderStyle}" Text="Buy this Product for 9000 HUF/Month"/>
                 <StackPanel HorizontalAlignment="Center" Orientation="Horizontal">
-                    <Button Content="Mom's Card"/>
-                    <Button Margin="5,0,0,0" Content="Mom's Phone"/>
+                    <Button Click="Card_Click" Content="Mom's Card"/>
+                    <Button Margin="5,0,0,0" Click="Phone_Click" Content="Mom's Phone"/>
                 </StackPanel>
             </StackPanel>
         </Grid>
